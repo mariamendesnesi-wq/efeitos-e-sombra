@@ -1,0 +1,143 @@
+:root {
+    --cor-fundo: #f4f6f8;
+    --cor-texto: #222;
+    --cor-card: #ffffff;
+    --cor-primaria: #2563eb;
+    --cor-secundaria: #8b5cf6;
+    --cor-footer: #172033;
+}
+
+/* Transição suave entre os temas */
+* {
+    box-sizing: border-box;
+    transition: background-color 0.5s ease,
+                color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 42px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* Botão */
+.btn-tema-escuro {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: white;
+    color: #222;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Efeito diferente no botão */
+.btn-tema-escuro:hover {
+    transform: scale(1.06);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Conteúdo */
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+/* Artigos */
+article {
+    background-color: var(--cor-card);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 14px;
+
+    /* Sombra modificada */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+article h2 {
+    margin-top: 0;
+    color: var(--cor-primaria);
+}
+
+article p {
+    line-height: 1.7;
+}
+
+article a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: var(--cor-footer);
+    color: white;
+}
+
+/* =========================
+   TEMA ESCURO
+   ========================= */
+
+.tema-escuro {
+    --cor-fundo: #111827;
+    --cor-texto: #f3f4f6;
+    --cor-card: #1f2937;
+    --cor-primaria: #60a5fa;
+    --cor-secundaria: #a78bfa;
+    --cor-footer: #080d17;
+}
+
+/* Destaque do botão no tema escuro */
+.tema-escuro .btn-tema-escuro {
+    background-color: var(--cor-secundaria);
+    color: #ffffff;
+}
+
+/* Artigos no tema escuro */
+.tema-escuro article {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    article {
+        padding: 20px;
+    }
+}

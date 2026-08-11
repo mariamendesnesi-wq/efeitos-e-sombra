@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Tech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Meu Blog</h1>
+        <p>Ideias, tecnologia e desenvolvimento web</p>
+
+        <button id="btnTema" class="btn-tema-escuro">
+            🌙 Tema escuro
+        </button>
+    </header>
+
+    <main>
+
+        <article>
+            <h2>Melhorando o design do site</h2>
+
+            <p>
+                Nesta etapa, adicionamos melhorias visuais ao projeto,
+                deixando os conteúdos mais organizados e agradáveis.
+            </p>
+
+            <a href="#">Leia mais →</a>
+        </article>
+
+        <article>
+            <h2>Personalizando o tema escuro</h2>
+
+            <p>
+                O tema escuro recebeu novas cores para melhorar o contraste
+                e facilitar a visualização dos elementos.
+            </p>
+
+            <a href="#">Leia mais →</a>
+        </article>
+
+        <article>
+            <h2>Novos efeitos com CSS</h2>
+
+            <p>
+                Também adicionamos sombras, transições e efeitos de interação
+                para deixar a página mais moderna.
+            </p>
+
+            <a href="#">Leia mais →</a>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>© 2026 - Meu Blog Tech</p>
+    </footer>
+
+    <script>
+        const botao = document.getElementById("btnTema");
+
+        botao.addEventListener("click", () => {
+            document.body.classList.toggle("tema-escuro");
+
+            if (document.body.classList.contains("tema-escuro")) {
+                botao.textContent = "☀️ Tema claro";
+            } else {
+                botao.textContent = "🌙 Tema escuro";
+            }
+        });
+    </script>
+
+</body>
+</html>
